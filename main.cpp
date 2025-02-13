@@ -9,7 +9,8 @@ using namespace std;
  */
 bool summable(const int[], const int&, const int&);
 
-/* Armstrong numbers are equal to the sum of the cubes of the individual digits
+/* Armstrong numbers are equal to the sum of the individual digits raised to the power of the
+ * length of the number i.e. a 3 digit each number is cubed, 6 digit number each is raised to the 6th
  * Your task is to write a function to perform this action iteratively and recursively
  * Do not modify main
  */
