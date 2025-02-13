@@ -5,9 +5,9 @@
 using namespace std;
 
 /* Write a recursive function ‘summable’ that takes an array of integers, a number of
- * terms to use, and a value to sum too. - summable([1,2,3,5], 3, 9) = true
+ * terms to use, and a value to sum too. - summable([1,2,3,5], 4, 3, 9) = true
  */
-bool summable(const int[], const int&, const int&);
+bool summable(const int[], const int& sz, const int& num_terms, const int& total);
 
 /* Armstrong numbers are equal to the sum of the individual digits raised to the power of the
  * length of the number i.e. a 3 digit each number is cubed, 6 digit number each is raised to the 6th
@@ -28,13 +28,17 @@ int main() {
      * The array will be dynamically sized using pointers
      */
     int *arr;
+    int sz;
     int num_terms;
     int total;
 
     cout << "How many terms in the list of numbers? ";
+    cin >> sz;
+    cout << "How many terms for the sum? ";
     cin >> num_terms;
-    arr = new int[num_terms];
-    for (int i = 0; i < num_terms; i++) {
+
+    arr = new int[sz];
+    for (int i = 0; i < sz; i++) {
         cout << "Enter number " << i+1 << " term : ";
         cin >> arr[i];
     }
@@ -42,9 +46,9 @@ int main() {
     cin >> total;
     cout << endl;
 
-    cout << "The total " << total << " can" << (summable(arr, num_terms, total) ? " " : " not ") <<
+    cout << "The total " << total << " can" << (summable(arr, sz, num_terms, total) ? " " : " not ") <<
             "be formed from the array ";
-    for (int i = 0; i < num_terms; i++) {
+    for (int i = 0; i < sz; i++) {
         cout << "[" << arr[i] << "]"<< endl;
     }
     cout << endl;
@@ -98,7 +102,7 @@ int main() {
 }
 
 /* Write your function definitions here */
-bool summable(const int *arr, const int num_terms, const int total) {
+bool summable(const int *arr, const int& sz, const int num_terms, const int total) {
 
 }
 int armstrongIter(const int num_terms) {
