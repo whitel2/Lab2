@@ -101,9 +101,9 @@ int main() {
 bool summable(const int *arr, const int num_terms, const int total) {
 
 }
-bool armstrongIter(const int num_terms) {
+int armstrongIter(const int num_terms) {
 
 }
-bool armstrongRecur(const int num_terms) {
+int armstrongRecur(const int num_terms) {
 
 }
