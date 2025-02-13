@@ -15,8 +15,8 @@ bool summable(const int[], const int&, const int&);
  * Do not modify main
  */
 
-bool armstrongIter(const int&); // Iterative Armstrong
-bool armstrongRecur(const int&); // Recursive Armstrong
+int armstrongIter(const int&); // Iterative Armstrong
+int armstrongRecur(const int&); // Recursive Armstrong
 
 int main() {
 
@@ -64,7 +64,7 @@ int main() {
 
     // Loop through 10k values to find the first 7 Armstrong numbers
     for (int i = 1; i <= LIMIT; i++) {
-        if (armstrongIter(i)) {
+        if (armstrongIter(i) == i) {
            // cout << i << endl;
         }
     }
@@ -80,7 +80,7 @@ int main() {
 
     start = chrono::high_resolution_clock::now();
     for (int i = 1; i <= LIMIT; i++) {
-        if (armstrongRecur(i)) {
+        if (armstrongRecur(i) == i) {
          //cout << i << endl;
         }
     }
